@@ -1,0 +1,163 @@
+body{
+  margin: 0;
+  padding: 0;
+
+  font-family: 'PT Sans', sans-serif;
+  background-color: #f2f2f2;
+  color: #000;
+  text-transform: uppercase;
+
+  font-size: 14px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+a{
+  color: inherit;
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.body-wrapper{
+  min-width: 768px;
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+}
+
+.main-navigation{
+
+}
+
+.main-navigation-items{
+  display: flex;
+  flex-direction: row;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* не рабатает с flex-basis 20% */
+  /* padding-left: 6%; */
+  /* padding-right: 6%; */
+}
+/* так работает с flex-basis 20%, но не нравится */
+.main-navigation-item:first-of-type{
+  margin-left: 6%;
+}
+
+.main-navigation-item:last-of-type{
+  margin-right: 6%;
+}
+
+
+.main-navigation-item:nth-last-of-type(1),
+.main-navigation-item:nth-last-of-type(2){
+  text-align: right;
+}
+
+
+.main-navigation-item{
+  box-sizing: border-box;
+  flex-basis: 20%;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-navigation-item__logo{
+  flex-basis: 8%;
+  padding: 0;
+  position: relative;
+}
+
+.main-navigation-logo{
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+
+  width: 140px;
+  max-width: 140px;
+
+  z-index: 2;
+}
+
+.intro-poster{
+  height: 510px;
+  position: relative;
+  background-color: #83b5d4;
+  background-image: url('../img/intro-bg.jpg');
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+
+.intro-poster::after{
+  content: '';
+  /* width: 100%; */
+  height: 57px;
+
+  background-image: url('../img/intro-mask.png');
+  background-position: center 0;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+}
+
+.intro-poster-welcome{
+  position: absolute;
+  left: 50%;
+  margin-left: -128px;
+  top: 76px;
+}
+
+.intro-poster-sedona{
+  position: absolute;
+  left: 50%;
+  margin-left: -229px;
+  top: 215px;
+}
+
+.intro-poster-grand{
+  position: absolute;
+  left: 50%;
+  margin-left: -148px;
+  top: 347px;
+}
+
+.intro-h1{
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  margin-top: 62px;
+}
