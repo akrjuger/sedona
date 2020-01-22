@@ -278,5 +278,58 @@ img{
 
 .benefits-item-more-info-icon{
   margin-bottom: 30px;
+}
 
+.search-hotel-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 55px;
+}
+
+.search-hotel-wrapper h2{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 36px;
+
+  text-align: center;
+}
+
+.search-hotel-wrapper p{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+
+  line-height: 24px;
+  text-align: center;
+
+  width: 500px;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #766357;
+  color: #fff;
+}
+
+.search-hotel-button{
+    padding: 34px 140px;
+
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.modal-search{
+  display: none;
+}
+
+.main-map{
+  background-color: #e9e5dc;
 }
