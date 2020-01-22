@@ -95,10 +95,31 @@
           </ul>
         </article>
 
-        <section class="main-search-hotel">
-          <h2>Заинтересовались?</h2>
-          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <a href="#">Поиск гостиницы в Седоне</a>
+        <section class="search-hotel">
+          <div class="search-hotel-wrapper">
+            <h2>Заинтересовались?</h2>
+            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            <a href="#">Поиск гостиницы в Седоне</a>
+          </div>
+          <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="search-input-wrapper">
+              <label for="start-date">Дата заезда</label>
+              <input class="search-input-date" type="date" name="start-date" id="start-date" value="">
+            </div>
+            <div class="search-input-wrapper">
+              <label for="end-date">Дата выезда</label>
+              <input class="search-input-date" type="date" name="end-date" id="end-date" value="">
+            </div>
+            <div class="search-input-wrapper">
+              <label for="adult-quantity">Взрослые</label>
+              <input class="search-input-quantity" type="number" name="adult-quantity" id="adult-quantity" value="2">
+            </div>
+            <div class="search-input-wrapper">
+              <label for="children-quantity">Дети</label>
+              <input class="search-input-quantity" type="number" name="children-quantity" id="children-quantity" value="0">
+            </div>
+            <input class="search-input-button" type="submit" name="search-button" value="Найти">
+          </form>
         </section>
 
         <section class="main-map">
