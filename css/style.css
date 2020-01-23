@@ -125,17 +125,16 @@ img{
 
 .intro-poster::after{
   content: '';
-  /* width: 100%; */
+  width: 100%;
   height: 57px;
 
   background-image: url('../img/intro-mask.png');
-  background-position: center 0;
+  background-position: bottom;
   background-repeat: no-repeat;
+  background-size: contain;
 
   position: absolute;
   bottom: -1px;
-  left: -1px;
-  right: -1px;
 }
 
 .intro-poster-welcome{
