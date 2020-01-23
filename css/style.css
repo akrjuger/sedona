@@ -341,5 +341,76 @@ img{
   bottom: 0;
   left: 0;
   right: 0;
-  z-index:2;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  padding: 36px 0;
+}
+
+.footer section{
+  flex-basis: 0;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-hashtag{
+  margin: 0;
+  padding: 0;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.footer-social-items{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item{
+  width: 46px;
+  height: 48px;
+  margin-right: 7px;
+  position: relative;
+
+  background-color: #81b3d2;
+}
+
+.footer-social-item::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+
+
+.footer-social-item__Twitter::before{
+  background-image: url('../img/social-twitter.svg');
+}
+
+.footer-social-item__FaceBook::before{
+  background-image: url('../img/social-fb.svg');
+  background-size: 15px 23px;
+}
+
+.footer-social-item__YouTube::before{
+  background-image: url('../img/social-youtube.svg');
+}
+
+.footer-logo{
+  margin-left: 7px;
 }
