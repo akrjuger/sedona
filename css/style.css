@@ -404,6 +404,103 @@ img{
   flex-grow: 1;
 }
 
+.search-input-date-wrapper{
+  position: relative;
+}
+
+.form-calendar-btn{
+  position: absolute;
+  top:50%;
+  margin-top: -11px;
+  right: 9px;
+
+  width: 21px;
+  height: 22px;
+
+  background-image: url('../img/form-calendar-normal.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0.3;
+}
+
+.form-calendar-btn:hover,
+.form-calendar-btn:focus{
+  opacity: 1;
+  outline: 0;
+}
+
+.form-calendar-btn:active{
+  background-image: url('../img/form-calendar-blue.svg');
+  outline: 0;
+}
+
+.search-input-quantity-wrapper{
+  position: relative;
+}
+
+.form-input-quantity-btn{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -5.5px;
+
+  width: 11px;
+  height: 11px;
+  background: transparent;
+}
+
+.form-input-quantity-btn:hover,
+.form-input-quantity-btn:focus,
+.form-input-quantity-btn:active{
+  outline: 0;
+}
+
+.form-input-quantity-btn::before{
+  content: '';
+  position: absolute;
+
+  top:50%;
+  right: 0;
+  margin-top: -1.5px;
+  width: 11px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.form-input-quantity-plus::after{
+  content: '';
+  position: absolute;
+
+  top:0;
+  left: 50%;
+  margin-left: -1.5px;
+  width: 3px;
+  height: 11px;
+  background-color: #a9a9a9;
+}
+
+.form-input-quantity-btn:hover::after,
+.form-input-quantity-btn:hover::before,
+.form-input-quantity-btn:focus::after,
+.form-input-quantity-btn:focus::before{
+  background-color: #000;
+}
+
+.form-input-quantity-btn:active::after,
+.form-input-quantity-btn:active::before{
+  background-color: #81b3d2;
+}
+
+.form-input-quantity-minus{
+  left: 14px;
+}
+
+.form-input-quantity-plus{
+  right: 14px;
+}
+
 input[type="text"]{
   box-sizing: border-box;
   background-color: #f2f2f2;

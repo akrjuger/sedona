@@ -105,20 +105,34 @@
             <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="search-input-wrapper">
                 <label for="start-date">Дата заезда:</label>
-                <input class="search-input-date" type="text" name="start-date" id="start-date" value="" placeholder="1 февраля 2020">
+                <div class="search-input-date-wrapper">
+                  <input class="search-input-date" type="text" name="start-date" id="start-date" value="" placeholder="1 февраля 2020">
+                  <button class="form-calendar-btn" type="button" name="form-calendar"><span class="visually-hidden">Показать календарь</span</button>
+                </div>
               </div>
               <div class="search-input-wrapper">
                 <label for="end-date">Дата выезда:</label>
-                <input class="search-input-date" type="text" name="end-date" id="end-date" value="" placeholder="13 февраля 2020">
+                <div class="search-input-date-wrapper">
+                  <input class="search-input-date" type="text" name="end-date" id="end-date" value="" placeholder="13 февраля 2020">
+                  <button class="form-calendar-btn" type="button" name="form-calendar"><span class="visually-hidden">Показать календарь</span</button>
+                </div>
               </div>
               <div class="search-input-small-wrapper">
                 <div class="search-input-wrapper">
                   <label for="adult-quantity">Взрослые:</label>
-                  <input class="search-input-quantity" type="text" name="adult-quantity" id="adult-quantity" value="2">
+                  <div class="search-input-quantity-wrapper">
+                    <button class="form-input-quantity-btn form-input-quantity-minus" type="button" name="minus"><span class="visually-hidden">Меньше</span></button>
+                    <input class="search-input-quantity" type="text" name="adult-quantity" id="adult-quantity" value="2">
+                    <button class="form-input-quantity-btn form-input-quantity-plus" type="button" name="plus"><span class="visually-hidden">Больше</span></button>
+                  </div>
                 </div>
                 <div class="search-input-wrapper">
                   <label for="children-quantity">Дети:</label>
-                  <input class="search-input-quantity" type="text" name="children-quantity" id="children-quantity" value="0">
+                  <div class="search-input-quantity-wrapper">
+                    <button class="form-input-quantity-btn form-input-quantity-minus" type="button" name="minus"><span class="visually-hidden">Меньше</span></button>
+                    <input class="search-input-quantity" type="text" name="children-quantity" id="children-quantity" value="0">
+                    <button class="form-input-quantity-btn form-input-quantity-plus" type="button" name="plus"><span class="visually-hidden">Больше</span></button>
+                  </div>
                 </div>
               </div>
               <input class="btn-blue search-input-button" type="submit" name="search-button" value="Найти">
