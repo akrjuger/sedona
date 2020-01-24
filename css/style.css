@@ -252,15 +252,19 @@ img{
 
 .benefits-item-image-wrapper{
   flex-basis: 67%;
+  position: relative;
 
-  background-image: url('../img/benefits-1.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.benefits-item-image-wrapper-grand{
-  background-image: url('../img/benefits-2.jpg');
+.benefits-item-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .benefits-items-small{
