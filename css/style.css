@@ -73,7 +73,6 @@ img{
 }
 
 .main-navigation{
-
 }
 
 .main-navigation-items{
@@ -83,11 +82,8 @@ img{
   padding: 0;
   margin: 0;
   list-style: none;
-  /* не рабатает с flex-basis 20% */
-  /* padding-left: 6%; */
-  /* padding-right: 6%; */
 }
-/* так работает с flex-basis 20%, но не нравится */
+
 .main-navigation-item:first-of-type{
   margin-left: 6%;
 }
@@ -96,19 +92,19 @@ img{
   margin-right: 6%;
 }
 
-
-.main-navigation-item:nth-last-of-type(1),
-.main-navigation-item:nth-last-of-type(2){
-  text-align: right;
-}
-
-
 .main-navigation-item{
   box-sizing: border-box;
   flex-basis: 20%;
 
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.main-navigation-item--right-align{
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 0;
 }
 
 .main-navigation-item__logo{
@@ -128,10 +124,6 @@ img{
   z-index: 2;
 }
 
-.intro{
-  margin-bottom: 35px;
-}
-
 .intro-poster{
   height: 510px;
   position: relative;
@@ -139,6 +131,7 @@ img{
   background-image: url('../img/intro-bg.jpg');
   background-position: center 0;
   background-repeat: no-repeat;
+  margin-bottom: 62px;
 }
 
 .intro-poster::after{
@@ -181,7 +174,7 @@ img{
   width: 100%;
   text-align: center;
 
-  margin-top: 62px;
+  margin-bottom: 35px;
 
   font-size: 21px;
   line-height: 21px;
@@ -206,6 +199,8 @@ img{
   padding: 0;
   list-style: none;
 
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -213,6 +208,11 @@ img{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+.benefits-item--small{
+  width: calc(100%/3);
 }
 
 .benefits-item-info{
@@ -447,11 +447,14 @@ img{
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 50%;
-  margin-top: -5.5px;
+  /* top: 50%;
+  margin-top: -5.5px; */
 
-  width: 11px;
-  height: 11px;
+  /* width: 11px; */
+  /* height: 11px; */
+  top:0;
+  width: 39px;
+  height: 100%;
   background: transparent;
 }
 
@@ -466,7 +469,7 @@ img{
   position: absolute;
 
   top:50%;
-  right: 0;
+  right: 14px;
   margin-top: -1.5px;
   width: 11px;
   height: 3px;
@@ -477,7 +480,8 @@ img{
   content: '';
   position: absolute;
 
-  top:0;
+  top:50%;
+  margin-top: -5.5px;
   left: 50%;
   margin-left: -1.5px;
   width: 3px;
@@ -498,11 +502,11 @@ img{
 }
 
 .form-input-quantity-minus{
-  left: 14px;
+  left:0;
 }
 
 .form-input-quantity-plus{
-  right: 14px;
+  right: 0;
 }
 
 input[type="text"]{
@@ -544,7 +548,8 @@ input[type="text"]:focus{
 
 .search-hotel-form .search-input-quantity{
   text-align: center;
-
+  padding-left: 39px;
+  padding-right: 39px;
   width: 114px;
 }
 
