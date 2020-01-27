@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона-отели</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <nav class="main-navigation">
+          <ul class="main-navigation-items">
+            <li class="main-navigation-item"><a href="#">Информация</a></li>
+            <li class="main-navigation-item"><a href="#">Фото и видео</a></li>
+            <li class="main-navigation-item main-navigation-item__logo"><a> <img class="main-navigation-logo" src="./img/nav-logo.png" alt="Главная"> </a></li>
+            <li class="main-navigation-item main-navigation-item--right-align"><a href="#">Карта штата</a></li>
+            <li class="main-navigation-item main-navigation-item--right-align"><a href="#">Гостиницы</a></li>
+          </ul>
+      </nav>
+      <main>
+        <section class="filters">
+          <form class="" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="filter-wrapper">
+              <fieldset>
+                <legend>Инфраструктура:</legend>
+                <label><input type="checkbox" name="bass" value="bass">Бассейн</label>
+                <label><input type="checkbox" name="parking" value="parking">Парковка</label>
+                <label><input type="checkbox" name="wi-fi" value="wi-fi">Wi-Fi</label>
+              </fieldset>
+              <fieldset>
+                <legend>Тип жилья:</legend>
+                <label><input type="checkbox" name="hotels" value="hotels">Гостиница</label>
+                <label><input type="checkbox" name="motels" value="motels">Мотель</label>
+                <label><input type="checkbox" name="apartments" value="apartments">Аппартаменты</label>
+              </fieldset>
+              <div class="filters-column-wrapper">
+                <fieldset>
+                  <legend>Стоимость в сутки (Р):</legend>
+                  <label>От<input type="text" name="price-min" value="" placeholder="0"></label>
+                  <label>До<input type="text" name="price-max" value="" placeholder="5000"></label>
+                  <div class="range-wrapper">
+                    <div class="range-min"></div>
+                    <div class="range-middle"></div>
+                    <div class="range-max"></div>
+                  </div>
+                </fieldset>
+                <button type="submit" name="button">Показать</button>
+              </div>
+            </div>
+          </form>
+        </section>
+        <section class="sort">
+          <p>Найдено: 3</p>
+          <p>Сортировка:
+            <a href="#">По цене</a>
+            <a href="#">По типу</a>
+            <a href="#">По рейтингу</a>
+          </p>
+          <p>
+            <a href="#">По убыванию</a>
+            <a href="#">По возрастанию</a>
+          </p>
+        </section>
+        <ul class="hotels">
+          <li>
+            <img src="" alt="">
+            <h2>Amara Resort&Spa</h2>
+            <p>Гостиница</p>
+            <p>От <span class="price">4000</span> Р.</p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <div class="stars">
+              <span class="visually-hidden">4 звезды</span>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+            </div>
+            <p>Рейтинг: <span class="rate">8.5</span></p>
+          </li>
+        </ul>
+      </main>
+      
+      <footer class="footer">
+        <section>
+          <p class="footer-hashtag">#visitsedona</p>
+        </section>
+        <section class="footer-social">
+          <ul class="footer-social-items">
+            <li><a class="footer-social-item footer-social-item__Twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+            <li><a class="footer-social-item footer-social-item__FaceBook" href="#"><span class="visually-hidden">FaceBook</span></a></li>
+            <li><a  class="footer-social-item footer-social-item__YouTube" href="#"><span class="visually-hidden">YouTube</span></a></li>
+          </ul>
+        </section>
+        <section>
+            <p>WebSite by </p>
+            <img class="footer-logo" width="115px" height="41px" src="./img/logo-htmlacademy.svg" alt="HTMLACADEMY">
+        </section>
+      </footer>
+  </body>
+</html>
