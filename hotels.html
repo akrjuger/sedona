@@ -13,40 +13,42 @@
           <ul class="main-navigation-items">
             <li class="main-navigation-item"><a href="#">Информация</a></li>
             <li class="main-navigation-item"><a href="#">Фото и видео</a></li>
-            <li class="main-navigation-item main-navigation-item__logo"><a> <img class="main-navigation-logo" src="./img/nav-logo.png" alt="Главная"> </a></li>
+            <li class="main-navigation-item main-navigation-item__logo"><a href="#"><img class="main-navigation-logo" src="./img/nav-logo.png" alt="Главная"></a></li>
             <li class="main-navigation-item main-navigation-item--right-align"><a href="#">Карта штата</a></li>
             <li class="main-navigation-item main-navigation-item--right-align"><a href="#">Гостиницы</a></li>
           </ul>
       </nav>
       <main>
         <section class="filters">
-          <form class="" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="filter-wrapper">
-              <fieldset>
+          <form class="filters-form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset>
                 <legend>Инфраструктура:</legend>
-                <label><input type="checkbox" name="bass" value="bass">Бассейн</label>
-                <label><input type="checkbox" name="parking" value="parking">Парковка</label>
-                <label><input type="checkbox" name="wi-fi" value="wi-fi">Wi-Fi</label>
+                <input type="checkbox" name="bass" value="bass" id="inf-bass"><label class="label-checkbox" for="inf-bass">Бассейн</label>
+                <input type="checkbox" name="parking" value="parking" id="inf-parking"><label class="label-checkbox" for="inf-parking">Парковка</label>
+                <input type="checkbox" name="wi-fi" value="wi-fi" id="inf-wi-fi"><label class="label-checkbox" for="inf-wi-fi">Wi-Fi</label>
               </fieldset>
               <fieldset>
                 <legend>Тип жилья:</legend>
-                <label><input type="checkbox" name="hotels" value="hotels">Гостиница</label>
-                <label><input type="checkbox" name="motels" value="motels">Мотель</label>
-                <label><input type="checkbox" name="apartments" value="apartments">Аппартаменты</label>
+                <input type="checkbox" name="hotels" value="hotels" id="hotels"><label class="label-checkbox" for="hotels">Гостиница</label>
+                <input type="checkbox" name="motels" value="motels" id="motels"><label class="label-checkbox" for="motels">Мотель</label>
+                <input type="checkbox" name="apartments" value="apartments" id="apartments"><label class="label-checkbox" for="apartments">Аппартаменты</label>
               </fieldset>
               <div class="filters-column-wrapper">
                 <fieldset>
                   <legend>Стоимость в сутки (Р):</legend>
-                  <label>От<input type="text" name="price-min" value="" placeholder="0"></label>
-                  <label>До<input type="text" name="price-max" value="" placeholder="5000"></label>
+                  <div class="price-wrapper">
+                    <label for="price-min">От<input class="input-price" type="text" name="price-min" id="price-min" value="0" placeholder="0"></label>
+                    <label for="price-max">До<input class="input-price" type="text" name="price-max" id="price-max"  value="5000" placeholder="5000"></label>
+                  </div>
                   <div class="range-wrapper">
-                    <div class="range-min"></div>
                     <div class="range-middle"></div>
-                    <div class="range-max"></div>
+                    <div class="range-circle range-min"></div>
+                    <div class="range-circle range-max"></div>
                   </div>
                 </fieldset>
-                <button type="submit" name="button">Показать</button>
-              </div>
+                <div class="button-wrapper">
+                    <button type="submit" name="button">Показать</button>
+                </div>
             </div>
           </form>
         </section>
@@ -81,7 +83,7 @@
           </li>
         </ul>
       </main>
-      
+
       <footer class="footer">
         <section>
           <p class="footer-hashtag">#visitsedona</p>
