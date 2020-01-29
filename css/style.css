@@ -9,6 +9,7 @@ body{
 
   font-size: 14px;
   line-height: 21px;
+  letter-spacing: 0.01em;
 
   display: flex;
   justify-content: center;
@@ -35,6 +36,7 @@ input[type="submit"]{
   border: 0;
   font: inherit;
   cursor: pointer;
+  text-transform: inherit;
 }
 
 a{
@@ -96,8 +98,8 @@ img{
   box-sizing: border-box;
   flex-basis: 20%;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   padding-right: 20px;
 }
 
@@ -105,6 +107,12 @@ img{
   text-align: right;
   padding-left: 20px;
   padding-right: 0;
+}
+
+.main-navigation-item--current a,
+.main-navigation-item--current a:hover,
+.main-navigation-item--current a:focus{
+  color: #766357;
 }
 
 .main-navigation-item__logo{
@@ -129,9 +137,9 @@ img{
   position: relative;
   background-color: #83b5d4;
   background-image: url('../img/intro-bg.jpg');
-  background-position: center 0;
+  background-position: center -55px;
   background-repeat: no-repeat;
-  margin-bottom: 62px;
+  margin-bottom: 42px;
 }
 
 .intro-poster::after{
@@ -174,10 +182,10 @@ img{
   width: 100%;
   text-align: center;
 
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   font-size: 21px;
-  line-height: 21px;
+  line-height: 26px;
 }
 
 .benefits{
@@ -191,7 +199,7 @@ img{
   margin: 0;
   padding: 0;
 
-  margin-bottom: 55px;
+  margin-bottom: 53px;
 }
 
 .benefits-items{
@@ -217,7 +225,7 @@ img{
 
 .benefits-item-info{
   box-sizing: border-box;
-  flex-basis: 33%;
+  flex-basis: 33.3%;
   min-height: 257px;
 
   display: flex;
@@ -235,6 +243,9 @@ img{
 .benefits-item-info h2{
   margin: 0;
   padding: 0;
+  /* pixel perfect */
+  margin-top: -12px;
+  margin-bottom: 4px;
 
 
   text-align: center;
@@ -244,14 +255,14 @@ img{
 .benefits-item-info p{
   margin: 0;
   padding: 0;
-  margin-top: 25px;
+  margin-top: 20px;
 
   text-align: center;
 }
 .benefits-item-number{}
 
 .benefits-item-image-wrapper{
-  flex-basis: 67%;
+  flex-basis: 66.7%;
   position: relative;
 
   display: flex;
@@ -276,6 +287,9 @@ img{
   color: black;
 
   flex-basis: 100%;
+
+  z-index: 2;
+  position: relative;
 }
 
 .benefits-items-more-info{
@@ -292,11 +306,16 @@ img{
 .benefits-item-more-info{
   background-color: white;
   color: black;
+
+  padding-top: 51px;
+  padding-bottom: 73px;
 }
 
 .benefits-item-more-info h3{
   margin: 0;
   padding: 0;
+
+  margin-bottom: 4px;
 
 
   text-align: center;
@@ -313,13 +332,16 @@ img{
   flex-direction: column;
   align-items: center;
 
-  padding-top: 55px;
+  padding-top: 49px;
+  z-index: 2;
+  position: relative;
+  background-color: #fff;
 }
 
 .search-hotel-wrapper h2{
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   font-size: 30px;
   line-height: 36px;
@@ -330,7 +352,7 @@ img{
 .search-hotel-wrapper p{
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 
   line-height: 24px;
   text-align: center;
@@ -378,27 +400,35 @@ img{
 }
 
 .search-hotel-button{
-    padding: 34px 140px;
+    padding: 29px 140px;
 
     font-size: 21px;
     line-height: 26px;
 }
 
 .modal-search{
-  /* display: none; */
-
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   left: 50%;
   margin-left: -284px;
 
   box-sizing: border-box;
   width: 568px;
-  padding:  55px;
+  padding:  57px;
 
   background-color: #fff;
   font-weight: bold;
+
+  transform: translate(0px, -400px);
+  transition: transform 0.5s;
 }
+
+.modal-search--on{
+  transform: translate(0px, 0px);
+  transition: transform 0.5s;
+}
+
+
 
 .search-input-wrapper{
   display: flex;
@@ -514,16 +544,16 @@ img{
 input[type="text"]{
   box-sizing: border-box;
   background-color: #f2f2f2;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
   height: 38px;
 
   text-transform: uppercase;
   font-weight: bold;
-
   font-family: inherit;
+  font-size: inherit;
 
-  border: none;
+  border: 2px solid #f2f2f2;
 }
 
 input[type="text"]:hover{
@@ -563,6 +593,7 @@ input[type="text"]:focus{
   margin: 0;
   padding: 0;
   padding: 16px 10px;
+  margin-top: 23px;
 
   width: 100%;
 
@@ -585,6 +616,19 @@ input[type="text"]:focus{
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.map-overlay{
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.map-overlay--on{
+  display: block;
 }
 
 .footer{

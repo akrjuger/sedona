@@ -15,7 +15,7 @@
             <li class="main-navigation-item"><a href="#">Фото и видео</a></li>
             <li class="main-navigation-item main-navigation-item__logo"><a> <img class="main-navigation-logo" src="./img/nav-logo.png" alt="Главная"> </a></li>
             <li class="main-navigation-item main-navigation-item--right-align"><a href="#">Карта штата</a></li>
-            <li class="main-navigation-item main-navigation-item--right-align"><a href="#">Гостиницы</a></li>
+            <li class="main-navigation-item main-navigation-item--right-align"><a href="./hotels.html">Гостиницы</a></li>
           </ul>
       </nav>
       <main>
@@ -135,6 +135,7 @@
         </section>
 
         <section class="main-map">
+          <div class="map-overlay"></div>
           <img class="map-img" src="./img/map.jpg" alt="Карта штата">
           <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591740.407377978!2d-111.79945837060522!3d34.98329776813746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sbg!4v1579758255103!5m2!1sru!2sbg" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </section>
@@ -157,5 +158,41 @@
         </section>
       </footer>
     </div>
+
+    <script type="text/javascript">
+      var modal = document.querySelector('.modal-search');
+      var button= document.querySelector('.search-hotel-button');
+      var map = document.querySelector('.map-overlay');
+
+      function toggleModal() {
+        modal.classList.toggle('modal-search--on');
+        map.classList.toggle('map-overlay--on');
+      }
+
+      function closeModal() {
+        modal.classList.remove('modal-search--on');
+        map.classList.remove('map-overlay--on');
+      }
+
+      button.addEventListener('click', function(evt){
+        evt.preventDefault();
+        toggleModal();
+      })
+
+      document.addEventListener('keydown',(function(event) {
+        if (event.keyCode == 27) {
+          closeModal()
+        }
+      }));
+
+      map.addEventListener('click',function(){
+          closeModal()
+      });
+
+
+
+
+      // modal.classList.toggle('modal-search--on');
+    </script>
   </body>
 </html>
